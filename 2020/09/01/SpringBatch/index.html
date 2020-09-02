@@ -1,0 +1,1234 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="SpringBatch, Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>SpringBatch | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">SpringBatch</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-09-01
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="批处理："><a href="#批处理：" class="headerlink" title="批处理："></a>批处理：</h1><h2 id="理解"><a href="#理解" class="headerlink" title="理解:"></a>理解:</h2><p> Spring Batch简单来说就是一个轻量级的批处理框架，从名字就可以知道它是Spring 的子项目。我们在工作开发中可能会面临到一些需要处理较大数据量的场景，例如将一个表的全部数据导入到另一张表结构类似的表中，或者批量读取一个或多个文件内容并写入到数据库中。而Spring Batch可以帮助我们快速的开发这种场景下的批处理应用程序 </p>
+<p> Spring Batch的一个基本层级结构： </p>
+<p>​            首先，Spring Batch运行的基本单位是一个Job，一个Job就做一件批处理的事情。 一个Job包含很多Step，step就是每个job要执行的单个步骤。      </p>
+<p><img src="https://docs.spring.io/spring-batch/4.1.x/reference/html/images/spring-batch-reference-model.png" alt="Figure 2.1: Batch Stereotypes"> </p>
+<ul>
+<li>JobRepository：用来注册job的容器</li>
+<li>JobLauncher：用来启动Job的接口</li>
+<li>Job：实际执行的任务，包含一个或多个Step</li>
+<li>Step：包含ItemReader、ItemProcessor和ItemWriter</li>
+<li>ItemReader：用来读取数据的接口</li>
+<li>ItemProcessor：用来处理数据的接口</li>
+<li>ItemWriter： 用来输出数据的接口</li>
+</ul>
+<p>通过JobLauncher来启动任务，可以看做是程序的入口，Job是代表一个具体的执行任务, 一个Job就做一件批处理的事情 ， 一个Job包含很多Step，step就是每个job要执行的单个步骤 </p>
+<p>Step里面，会有Tasklet，Tasklet是一个任务单元，它是属于可以重复利用的东西。 然后是Chunk，chunk就是数据块，你需要定义多大的数据量是一个chunk。 Chunk里面就是不断循环的一个流程，读数据，处理数据，然后写数据。Spring Batch会不断的循环这个流程，直到批处理数据完成 </p>
+<p><img src="https://img-blog.csdnimg.cn/20190615090352586.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N4eV9jaGg=,size_16,color_FFFFFF,t_70" alt="img"> </p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>Spring Batch为我们提供了非常实用的功能，对批处理场景进行了完善的抽象，它不仅能实现小数据的迁移，也能应对大企业的大数据实践应用。它让我们开发批处理应用可以事半功倍</p>
+<h2 id="项目搭建："><a href="#项目搭建：" class="headerlink" title="项目搭建："></a>项目搭建：</h2><p>官网创建地址： <a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a> </p>
+<h3 id="导入依赖："><a href="#导入依赖：" class="headerlink" title="导入依赖："></a>导入依赖：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-batch&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;5.1.18&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">            &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">            &lt;exclusions&gt;</span><br><span class="line">                &lt;exclusion&gt;</span><br><span class="line">                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;</span><br><span class="line">                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;</span><br><span class="line">                &lt;/exclusion&gt;</span><br><span class="line">            &lt;/exclusions&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.batch&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-batch-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="简单的demo项目"><a href="#简单的demo项目" class="headerlink" title="简单的demo项目"></a>简单的demo项目</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableBatchProcessing</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JobConfiguration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*自动注入Job的工厂类，用于生成job*/</span></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*自动注入Step的工厂类，用于生成step*/</span></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Job <span class="title">hello</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> jobBuilderFactory.get(<span class="string">"helloJob"</span>)        <span class="comment">//get提供Job的名称</span></span><br><span class="line">                .start(step())                 <span class="comment">//start()启动,step()是执行任务步骤</span></span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Step <span class="title">step</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> stepBuilderFactory.get(<span class="string">"step"</span>)       <span class="comment">//给Step命名</span></span><br><span class="line">                .tasklet(<span class="keyword">new</span> Tasklet() &#123;               <span class="comment">//要执行的任务</span></span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> RepeatStatus <span class="title">execute</span><span class="params">(StepContribution stepContribution, ChunkContext chunkContext)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                        <span class="comment">/*step的执行状态为FINISHED，表示结束step的执行</span></span><br><span class="line"><span class="comment">                        * 执行状态设置了CONTINUABLE，表示连续不断的执行step，没有终止状态</span></span><br><span class="line"><span class="comment">                        * */</span></span><br><span class="line">                        System.out.println(<span class="string">"Step执行中......"</span>);</span><br><span class="line">                        <span class="keyword">return</span> RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        </p>
+<p>没有正常输出的原因：因为SpringBatch是需要实例化的内容，会保存Job,Step执行的状态信息,则需要配置一个数据库，现在还没有配置数据库，就会尝试寻找SpringBatch内嵌数据库</p>
+<h3 id="使用内嵌数据库：h2"><a href="#使用内嵌数据库：h2" class="headerlink" title="使用内嵌数据库：h2"></a>使用内嵌数据库：h2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;com.h2database&lt;&#x2F;groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;h2&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="导入依赖"><a href="#导入依赖" class="headerlink" title="导入依赖"></a>导入依赖</h3><p>注释h2依赖，导入jdbc数据源的依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-starter-jdbc&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置application-properties"><a href="#配置application-properties" class="headerlink" title="配置application.properties"></a>配置application.properties</h3><p>​        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#数据库连接参数</span><br><span class="line">spring.datasource.driver-class-name&#x3D;com.mysql.jdbc.Driver</span><br><span class="line">spring.datasource.url&#x3D;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;springbatch</span><br><span class="line">spring.datasource.username&#x3D;root</span><br><span class="line">spring.datasource.password&#x3D;123456</span><br><span class="line">#springbatch里面的jar包里面提供的初始化sql脚本</span><br><span class="line">spring.datasource.schema&#x3D;classpath:&#x2F;org&#x2F;springframework&#x2F;batch&#x2F;core&#x2F;schema-mysql.sql</span><br><span class="line">#能自动启动时导入批处理需要的数据库表</span><br><span class="line">spring.batch.initialize-schema&#x3D;always</span><br></pre></td></tr></table></figure>
+
+<h3 id="包含内容"><a href="#包含内容" class="headerlink" title="包含内容"></a>包含内容</h3><h4 id="1-Flow："><a href="#1-Flow：" class="headerlink" title="1.Flow："></a>1.Flow：</h4><p>执行多个Step(按摆放顺序执行)</p>
+<h4 id="2-Split"><a href="#2-Split" class="headerlink" title="2.Split:"></a>2.Split:</h4><p>实现任务中的多个Step或Flow并发执行(通过抢占cpu来执行)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableBatchProcessing</span><br><span class="line">public class JobSplitDemoConfiguration &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step splitDemoStep1()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;splitDemoStep1&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;splitDemoStep1&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step splitDemoStep2()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;splitDemoStep2&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;splitDemoStep2&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step splitDemoStep3()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;splitDemoStep3&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;splitDemoStep3&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;创建Flow</span><br><span class="line">    @Bean</span><br><span class="line">    public Flow splitDemoFlow1 ()&#123;</span><br><span class="line">        return new FlowBuilder&lt;Flow&gt;(&quot;splitDemoFlow&quot;)</span><br><span class="line">                .start(splitDemoStep1())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Flow splitDemoFlow2 ()&#123;</span><br><span class="line">        return new FlowBuilder&lt;Flow&gt;(&quot;splitDemoFlow2&quot;)</span><br><span class="line">                .start(splitDemoStep2())</span><br><span class="line">                .next(splitDemoStep3())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;创建任务</span><br><span class="line">    @Bean</span><br><span class="line">    public Job splitDemoJob()&#123;</span><br><span class="line">        return  jobBuilderFactory.get(&quot;splitDemoJob&quot;)</span><br><span class="line">                .start(splitDemoFlow1())</span><br><span class="line">                .split(new SimpleAsyncTaskExecutor()).add(splitDemoFlow2())</span><br><span class="line">                .end()</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-决策器"><a href="#3-决策器" class="headerlink" title="3.决策器"></a>3.决策器</h4><p>​        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableBatchProcessing</span><br><span class="line">public class DeciderDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;创建Step</span><br><span class="line">    @Bean</span><br><span class="line">    public Step deciderDemoStep1()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;deciderDemoStep1&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;deciderDemoStep1&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step deciderDemoStep2()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;deciderDemoStep2&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;even&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step deciderDemoStep3()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;deciderDemoStep3&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;odd&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;创建决策器</span><br><span class="line">    @Bean</span><br><span class="line">    public JobExecutionDecider myDecider()&#123;</span><br><span class="line">        return  new MyDecider();                            &#x2F;&#x2F;决策器对应的类</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;创建任务</span><br><span class="line">    @Bean</span><br><span class="line">    public Job dd()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;deciderDemo&quot;)</span><br><span class="line">                .start(deciderDemoStep1())</span><br><span class="line">                &#x2F;&#x2F;通过决策器来决定执行哪一个Step</span><br><span class="line">                .next(myDecider())                               &#x2F;&#x2F;接受决策器并使用</span><br><span class="line">                .from(myDecider()).on(&quot;even&quot;).to(deciderDemoStep2())      &#x2F;&#x2F;判断决策器返回什么来执行哪个Step</span><br><span class="line">                .from(myDecider()).on(&quot;odd&quot;).to(deciderDemoStep3())</span><br><span class="line">                .from(deciderDemoStep3()).on(&quot;*&quot;).to(myDecider())         &#x2F;&#x2F;无论返回什么都再执行决策器</span><br><span class="line">                .end()</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>决策器实现类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;决策器对应的实现类</span><br><span class="line">public class MyDecider implements JobExecutionDecider &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;通过返回值来作为决策器的条件</span><br><span class="line">    private int count;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public FlowExecutionStatus decide(JobExecution jobExecution, StepExecution stepExecution) &#123;</span><br><span class="line">        count++;</span><br><span class="line">        if(count%2&#x3D;&#x3D;0)&#123;</span><br><span class="line">            return new FlowExecutionStatus(&quot;even&quot;);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return new FlowExecutionStatus(&quot;odd&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-Job嵌套："><a href="#4-Job嵌套：" class="headerlink" title="4.Job嵌套："></a>4.Job嵌套：</h4><p>一个Job可以嵌套在另一个Job中,被嵌套的Job称为子Job,外部嵌套被称为父Job,子Job不能单独执行，需要由父Job来启动</p>
+<h5 id="子Job"><a href="#子Job" class="headerlink" title="子Job"></a>子Job</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">* Job嵌套(子Job)</span><br><span class="line">* *&#x2F;</span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">public class ChildJob1 &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step chidJob1Step1()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;chidJobStep1&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;chidJobStep1&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job childJobOne()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;childJobOne&quot;)</span><br><span class="line">                .start(chidJob1Step1())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> * Job嵌套(子Job)</span><br><span class="line"> * *&#x2F;</span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">public class ChildJob2 &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step chidJob2Step1()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;chidJob2Step1&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;chidJob2Step1&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step chidJob2Step2()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;chidJob2Step2&quot;)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        System.out.println(&quot;chidJob2Step2&quot;);</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job childJobTwo()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;childJobOne&quot;)</span><br><span class="line">                .start(chidJob2Step1())</span><br><span class="line">                .next(chidJob2Step2())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="父Job"><a href="#父Job" class="headerlink" title="父Job"></a>父Job</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">Job嵌套（父Job）</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">public class NestedDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;注入两个子Job</span><br><span class="line">    @Autowired</span><br><span class="line">    private Job childJobOne;</span><br><span class="line">    @Autowired</span><br><span class="line">    private Job childJobTwo;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobLauncher launcher;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job parentJob(JobRepository repository, PlatformTransactionManager transactionManager)&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;parentJob&quot;)</span><br><span class="line">                &#x2F;&#x2F;创建两个子Job</span><br><span class="line">                .start(childJob1(repository,transactionManager))</span><br><span class="line">                .next(childJob2(repository, transactionManager))</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;返回的是Job类型的Step，特殊的step(Job类型的Step)</span><br><span class="line">    private Step childJob1(JobRepository repository, PlatformTransactionManager transactionManager) &#123;</span><br><span class="line">        return new JobStepBuilder(new StepBuilder(&quot;childJob1&quot;))</span><br><span class="line">                .job(childJobOne)</span><br><span class="line">                &#x2F;&#x2F;子Job不能单独启动，要有父Job来启动,所以使用父Job的启动对象来启动对象</span><br><span class="line">                .launcher(launcher)</span><br><span class="line">                &#x2F;&#x2F;指定持久化存储的对象</span><br><span class="line">                .repository(repository)</span><br><span class="line">                &#x2F;&#x2F;事务管理器</span><br><span class="line">                .transactionManager(transactionManager)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    private Step childJob2(JobRepository repository, PlatformTransactionManager transactionManager) &#123;</span><br><span class="line">        return new JobStepBuilder(new StepBuilder(&quot;childJob2&quot;))</span><br><span class="line">                .job(childJobTwo)</span><br><span class="line">                &#x2F;&#x2F;子Job不能单独启动，要有父Job来启动,所以使用父Job的启动对象来启动对象</span><br><span class="line">                .launcher(launcher)</span><br><span class="line">                &#x2F;&#x2F;指定持久化存储的对象</span><br><span class="line">                .repository(repository)</span><br><span class="line">                &#x2F;&#x2F;事务管理器</span><br><span class="line">                .transactionManager(transactionManager)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在启动时无法区分要执行的是父Job还是子Job，所以修改配置文件来指定父Job</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.batch.job.names&#x3D;parentJob</span><br></pre></td></tr></table></figure>
+
+<h4 id="监听器"><a href="#监听器" class="headerlink" title="监听器:"></a>监听器:</h4><p>​    用来监听批处理作业的执行情况, 帮助拦截任务或允许用户执行某些功能的步骤执行</p>
+<p>使用接口方式监听</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">Job级别的监听</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class MyJobListener implements JobExecutionListener &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;Job执行之前</span><br><span class="line">    @Override</span><br><span class="line">    public void beforeJob(JobExecution jobExecution) &#123;</span><br><span class="line">        System.out.println(&quot;Job执行之前开始监听......&quot;+&quot;Job名称为：&quot;+jobExecution.getJobInstance().getJobName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;Job执行之后</span><br><span class="line">    @Override</span><br><span class="line">    public void afterJob(JobExecution jobExecution) &#123;</span><br><span class="line">        System.out.println(&quot;Job执行之后开始监听......&quot;+&quot;Job名称为：&quot;+jobExecution.getJobInstance().getJobName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用注解方式监听</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">注解监听</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class MyChunkListener &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;*执行之前*&#x2F;</span><br><span class="line">    @BeforeChunk</span><br><span class="line">    public void beforeChunk(ChunkContext context)&#123;</span><br><span class="line">        &#x2F;&#x2F;通过ChunkContext获取上下文相应的信息</span><br><span class="line">        System.out.println(&quot;执行之前开始监听......&quot;+&quot;名称为：&quot;+context.getStepContext().getStepName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*执行之后*&#x2F;</span><br><span class="line">    @AfterChunk</span><br><span class="line">    public void afterChunk(ChunkContext context)&#123;</span><br><span class="line">        System.out.println(&quot;执行之后开始监听......&quot;+&quot;名称为：&quot;+context.getStepContext().getStepName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">监听测试</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Configuration</span><br><span class="line">public class ListenerDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line">    </span><br><span class="line">    @Bean</span><br><span class="line">    public Job listenerJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;listenerJob&quot;)</span><br><span class="line">                .start(step1())</span><br><span class="line">                .listener(new MyJobListener())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step step1() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;step1&quot;)</span><br><span class="line">                &#x2F;*读取，写入</span><br><span class="line">                    执行2条完整的数据后再执行输出处理</span><br><span class="line">                    &lt;String,String&gt;是指定字符串类型</span><br><span class="line">                *&#x2F;</span><br><span class="line">                .&lt;String,String&gt;chunk(2)</span><br><span class="line">                .faultTolerant()</span><br><span class="line">                .listener(new MyChunkListener())</span><br><span class="line">                &#x2F;&#x2F;读取数据</span><br><span class="line">                .reader(read())</span><br><span class="line">                &#x2F;&#x2F;输出数据</span><br><span class="line">                .writer(write())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*</span><br><span class="line">    注意：以下两个方法不能是private,要公开权限(public)</span><br><span class="line">     *&#x2F;</span><br><span class="line">    &#x2F;&#x2F;输出</span><br><span class="line">    @Bean</span><br><span class="line">    public ItemWriter&lt;String&gt; write() &#123;</span><br><span class="line">        return new ItemWriter&lt;String&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void write(List&lt;? extends String&gt; list) throws Exception &#123;</span><br><span class="line">                for (String items:list)&#123;</span><br><span class="line">                    System.out.println(items);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;读取</span><br><span class="line">    @Bean</span><br><span class="line">    public ItemReader&lt;String&gt; read() &#123;</span><br><span class="line">        return new ListItemReader&lt;&gt;(Arrays.asList(&quot;java&quot;,&quot;spring&quot;,&quot;springboot&quot;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：如果无法正常输出，则可能是aplication配置文件中的指定执行Job没有注释</p>
+<h4 id="Job参数："><a href="#Job参数：" class="headerlink" title="Job参数："></a>Job参数：</h4><p>在Job运行时可以以key=value形式传递参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class ParametersDemo implements StepExecutionListener &#123;</span><br><span class="line">    </span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    private Map&lt;String,JobParameter&gt; parameterMap;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job parameterJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;parameterJob&quot;)</span><br><span class="line">                .start(parameterStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;* Job执行的是step,也就是说Job使用的数据肯定是在step中使用</span><br><span class="line">    *  则只需要给step传递数据</span><br><span class="line">    *  使用监听(Step级别)的方式传递数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step parameterStep() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;parameterStep&quot;)</span><br><span class="line">                .listener(this)</span><br><span class="line">                .tasklet(new Tasklet() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                        &#x2F;&#x2F;输出接受的值</span><br><span class="line">                        System.out.println(parameterMap.get(&quot;info&quot;));</span><br><span class="line">                        return RepeatStatus.FINISHED;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void beforeStep(StepExecution stepExecution) &#123;</span><br><span class="line">        &#x2F;&#x2F;把任务传递的参数赋值给map</span><br><span class="line">        parameterMap &#x3D; stepExecution.getJobParameters().getParameters();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public ExitStatus afterStep(StepExecution stepExecution) &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ItemReader"><a href="#ItemReader" class="headerlink" title="ItemReader:"></a>ItemReader:</h4><h5 id="普通数据读取方式"><a href="#普通数据读取方式" class="headerlink" title="普通数据读取方式"></a>普通数据读取方式</h5><p>​            </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class ItemReaderDemo &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line">    </span><br><span class="line">    @Bean</span><br><span class="line">    public Job itemReaderDemoJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;itemReaderDemoJob&quot;)</span><br><span class="line">                .start(itemReaderDemoStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step itemReaderDemoStep() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;itemReaderDemoStep&quot;)</span><br><span class="line">                .&lt;String,String&gt;chunk(2)</span><br><span class="line">                .reader(itemReaderDemoRead())</span><br><span class="line">                .writer(list -&gt; &#123;</span><br><span class="line">                    for(String item:list)&#123;</span><br><span class="line">                        System.out.println(item);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;读取数据</span><br><span class="line">    @Bean</span><br><span class="line">    public MyReader itemReaderDemoRead() &#123;</span><br><span class="line">        List&lt;String&gt; list &#x3D; Arrays.asList(&quot;spring&quot;,&quot;java&quot;,&quot;springboot&quot;,&quot;springbatch&quot;);</span><br><span class="line">        return  new MyReader(list);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">自定义读取的实现</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class MyReader implements ItemReader&lt;String&gt; &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;使用迭代器，获取数据的迭代器</span><br><span class="line">    private Iterator&lt;String&gt; iterator;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;添加构造方法，用于数据传输</span><br><span class="line">    public MyReader(List&lt;String&gt; list)&#123;</span><br><span class="line">        this.iterator &#x3D; list.iterator();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException &#123;</span><br><span class="line">        &#x2F;&#x2F;读取数据，一个个读取</span><br><span class="line">        if(iterator.hasNext())&#123;           &#x2F;&#x2F;判断是否存在数据</span><br><span class="line">            System.out.println(&quot;已经读取数据,执行下一次...&quot;);</span><br><span class="line">            &#x2F;&#x2F;如果还有下一个数据就继续返回数据</span><br><span class="line">            return this.iterator.next();</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="从数据库中读取数据"><a href="#从数据库中读取数据" class="headerlink" title="从数据库中读取数据"></a>从数据库中读取数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*从数据库中读取数据*&#x2F;</span><br><span class="line">@Configuration</span><br><span class="line">public class ItemReaderDbDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;dbjdbcWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; dbjdbcWriter;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job itemReaderDbJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;itemReaderDbJob&quot;)</span><br><span class="line">                .start(itemReaderDbStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step itemReaderDbStep() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;itemReaderDbStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(2)</span><br><span class="line">                .reader(JdbcReader())</span><br><span class="line">                .writer(dbjdbcWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope   &#x2F;&#x2F;只限Step范围</span><br><span class="line">    public JdbcPagingItemReader&lt;User&gt; JdbcReader() &#123;</span><br><span class="line">        JdbcPagingItemReader&lt;User&gt; reader &#x3D; new JdbcPagingItemReader&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;指定数据源</span><br><span class="line">        reader.setDataSource(dataSource);</span><br><span class="line">        &#x2F;&#x2F;指定一次读取几条记录</span><br><span class="line">        reader.setFetchSize(2);</span><br><span class="line">        &#x2F;&#x2F;把读取到的记录转换成User对象</span><br><span class="line">        reader.setRowMapper(new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">                User user &#x3D; new User();</span><br><span class="line">                user.setId(resultSet.getInt(1));</span><br><span class="line">                user.setName(resultSet.getString(2));</span><br><span class="line">                user.setPwd(resultSet.getString(3));</span><br><span class="line">                return user;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;指定sql语句，获得结果集</span><br><span class="line">        MySqlPagingQueryProvider provider &#x3D; new MySqlPagingQueryProvider();</span><br><span class="line">        &#x2F;&#x2F;指定查询的字段</span><br><span class="line">        provider.setSelectClause(&quot;id,name,pwd&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定从哪个表中查询</span><br><span class="line">        provider.setFromClause(&quot;from user&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定根据哪个字段进行排序</span><br><span class="line">        Map&lt;String, Order&gt; sort &#x3D; new HashMap&lt;&gt;(1);   &#x2F;&#x2F;指定初始大小为1</span><br><span class="line">        sort.put(&quot;id&quot;,Order.ASCENDING);</span><br><span class="line">        &#x2F;&#x2F;将排序方式写入provider</span><br><span class="line">        provider.setSortKeys(sort);</span><br><span class="line">        reader.setQueryProvider(provider);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="从普通文件中读取数据"><a href="#从普通文件中读取数据" class="headerlink" title="从普通文件中读取数据"></a>从普通文件中读取数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class FileDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;fileWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; fileWriter;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job fileReaderDemoJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;fileReaderDemoJob&quot;)</span><br><span class="line">                .start(fileReaderDemoStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step fileReaderDemoStep() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;fileReaderDemoStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(5)</span><br><span class="line">                .reader(fileReader())</span><br><span class="line">                .writer(fileWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope</span><br><span class="line">    public FlatFileItemReader&lt;User&gt; fileReader() &#123;</span><br><span class="line">        FlatFileItemReader&lt;User&gt; reader &#x3D; new FlatFileItemReader&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F;查询要读取的文件</span><br><span class="line">        reader.setResource(new ClassPathResource(&quot;my.txt&quot;));</span><br><span class="line">        &#x2F;&#x2F;跳过第1行</span><br><span class="line">        reader.setLinesToSkip(1);</span><br><span class="line">        &#x2F;&#x2F;进行数据解析</span><br><span class="line">        DelimitedLineTokenizer tokenizer &#x3D; new DelimitedLineTokenizer();</span><br><span class="line">        &#x2F;&#x2F;指明字段(存在多个值，使用数组)</span><br><span class="line">        tokenizer.setNames(new String[]&#123;&quot;id&quot;,&quot;name&quot;,&quot;title&quot;&#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;把解析出来的一条数据映射为User对象</span><br><span class="line">        DefaultLineMapper&lt;User&gt; mapper &#x3D; new DefaultLineMapper&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F;提供映射内容</span><br><span class="line">        mapper.setLineTokenizer(tokenizer);</span><br><span class="line">        &#x2F;&#x2F;将解析出来的字段进行映射</span><br><span class="line">        mapper.setFieldSetMapper(new FieldSetMapper&lt;User&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public User mapFieldSet(FieldSet fieldSet) throws BindException &#123;</span><br><span class="line">                &#x2F;&#x2F;将字段当中的数据进行映射</span><br><span class="line">                User user &#x3D; new User();</span><br><span class="line">                &#x2F;&#x2F;根据类型来选择</span><br><span class="line">                user.setId(fieldSet.readInt(&quot;id&quot;));</span><br><span class="line">                user.setName(fieldSet.readString(&quot;name&quot;));</span><br><span class="line">                user.setTitle(fieldSet.readString(&quot;title&quot;));</span><br><span class="line">                return user;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;进行检查</span><br><span class="line">        mapper.afterPropertiesSet();</span><br><span class="line">        reader.setLineMapper(mapper);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="从xml中读取数据"><a href="#从xml中读取数据" class="headerlink" title="从xml中读取数据"></a>从xml中读取数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class XmlItemReaderDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;XmlItemWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; XmlItemWriter;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job XmlItemReaderJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;XmlItemReaderJob&quot;)</span><br><span class="line">                .start(XmlItemReaderStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step XmlItemReaderStep() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;XmlItemReaderStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(2)</span><br><span class="line">                .reader(XmlItemReader())</span><br><span class="line">                .writer(XmlItemWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope</span><br><span class="line">    public StaxEventItemReader&lt;User&gt; XmlItemReader()&#123;</span><br><span class="line">        StaxEventItemReader&lt;User&gt; reader &#x3D; new StaxEventItemReader&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F;读取文件</span><br><span class="line">        reader.setResource(new ClassPathResource(&quot;my.xml&quot;));</span><br><span class="line">        &#x2F;&#x2F;指定需要处理的根标签(&lt;user&gt;)</span><br><span class="line">        reader.setFragmentRootElementName(&quot;user&quot;);</span><br><span class="line">        &#x2F;&#x2F;把读取到的xml数据转成对象</span><br><span class="line">        XStreamMarshaller unmarshaller&#x3D; new XStreamMarshaller();</span><br><span class="line">        &#x2F;&#x2F;指定转换类型</span><br><span class="line">        Map&lt;String,Class&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;user&quot;,User.class);</span><br><span class="line">        unmarshaller.setAliases(map);</span><br><span class="line">        reader.setUnmarshaller(unmarshaller);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="多个文件进行读取"><a href="#多个文件进行读取" class="headerlink" title="多个文件进行读取"></a>多个文件进行读取</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class FilesItemReaderDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;filesItemWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; filesItemWriter;</span><br><span class="line"></span><br><span class="line">    @Value(&quot;classpath:&#x2F;file*.txt&quot;)</span><br><span class="line">    private Resource[] fileResources;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job filesItemReaderJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;filesItemReaderJob&quot;)</span><br><span class="line">                .start(filesItemReaderStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step filesItemReaderStep() &#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;filesItemReaderStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(5)</span><br><span class="line">                .reader(filesItemReader())</span><br><span class="line">                .writer(filesItemWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope</span><br><span class="line">    public MultiResourceItemReader&lt;User&gt; filesItemReader() &#123;</span><br><span class="line">        MultiResourceItemReader&lt;User&gt; reader &#x3D; new MultiResourceItemReader&lt;User&gt;();</span><br><span class="line">        reader.setDelegate(fileReader());</span><br><span class="line">        reader.setResources(fileResources);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope</span><br><span class="line">    public FlatFileItemReader&lt;User&gt; fileReader() &#123;</span><br><span class="line">        FlatFileItemReader&lt;User&gt; reader &#x3D; new FlatFileItemReader&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F;查询要读取的文件</span><br><span class="line">        reader.setResource(new ClassPathResource(&quot;my.txt&quot;));</span><br><span class="line">        &#x2F;&#x2F;跳过第1行</span><br><span class="line">        &#x2F;*reader.setLinesToSkip(1);*&#x2F;</span><br><span class="line">        &#x2F;&#x2F;进行数据解析</span><br><span class="line">        DelimitedLineTokenizer tokenizer &#x3D; new DelimitedLineTokenizer();</span><br><span class="line">        &#x2F;&#x2F;指明字段(存在多个值，使用数组)</span><br><span class="line">        tokenizer.setNames(new String[]&#123;&quot;id&quot;,&quot;name&quot;,&quot;title&quot;&#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;把解析出来的一条数据映射为User对象</span><br><span class="line">        DefaultLineMapper&lt;User&gt; mapper &#x3D; new DefaultLineMapper&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F;提供映射内容</span><br><span class="line">        mapper.setLineTokenizer(tokenizer);</span><br><span class="line">        &#x2F;&#x2F;将解析出来的字段进行映射</span><br><span class="line">        mapper.setFieldSetMapper(new FieldSetMapper&lt;User&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public User mapFieldSet(FieldSet fieldSet) throws BindException &#123;</span><br><span class="line">                &#x2F;&#x2F;将字段当中的数据进行映射</span><br><span class="line">                User user &#x3D; new User();</span><br><span class="line">                &#x2F;&#x2F;根据类型来选择</span><br><span class="line">                user.setId(fieldSet.readInt(&quot;id&quot;));</span><br><span class="line">                user.setName(fieldSet.readString(&quot;name&quot;));</span><br><span class="line">                user.setTitle(fieldSet.readString(&quot;title&quot;));</span><br><span class="line">                return user;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;进行检查</span><br><span class="line">        mapper.afterPropertiesSet();</span><br><span class="line">        reader.setLineMapper(mapper);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>读取（数据库读取和普通文件读取方式一样）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">数据读出</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Component(&quot;dbjdbcWriter&quot;)</span><br><span class="line">public class DbjdbcWriter implements ItemWriter&lt;User&gt; &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write(List&lt;? extends User&gt; list) throws Exception &#123;</span><br><span class="line">        for(User user:list)&#123;</span><br><span class="line">            System.out.println(user);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：实现方式要和main方法同级,建议将启动器的类复制和实现方式存放在同一个包下</p>
+<h4 id="ItemWriter"><a href="#ItemWriter" class="headerlink" title="ItemWriter"></a>ItemWriter</h4><p>​        ItemReader是一个个读取,ItemWriter是一批一批输出，提高批处理性能</p>
+<h5 id="读取普通文件写入数据库-失败"><a href="#读取普通文件写入数据库-失败" class="headerlink" title="读取普通文件写入数据库(失败)"></a>读取普通文件写入数据库(失败)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Bean</span><br><span class="line">    public JdbcBatchItemWriter&lt;User&gt; importWriter() &#123;</span><br><span class="line">        JdbcBatchItemWriter&lt;User&gt; writer &#x3D; new JdbcBatchItemWriter&lt;&gt;();</span><br><span class="line">        writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider&lt;&gt;());</span><br><span class="line">        writer.setSql(&quot;INSERT INTO user (id,name,title) VALUES (:id, :name,:title)&quot;);</span><br><span class="line">        writer.setDataSource(dataSource);</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="将数据库数据写入文件"><a href="#将数据库数据写入文件" class="headerlink" title="将数据库数据写入文件"></a>将数据库数据写入文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class ItemWriterDemodb &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;dbJdbcReader&quot;)</span><br><span class="line">    private ItemReader&lt;User&gt; dbJdbcReader;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;fileItemWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; fileItemWriter;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job fileItemWriterDemoJob()&#123;</span><br><span class="line">        return  jobBuilderFactory.get(&quot;fileItemWriterDemoJob&quot;)</span><br><span class="line">                .start(fileItemWriterDemoStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step fileItemWriterDemoStep()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;fileItemWriterDemoStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(2)</span><br><span class="line">                .reader(dbJdbcReader)</span><br><span class="line">                .writer(fileItemWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>读取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class DbJdbcReaderConfig &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public JdbcPagingItemReader&lt;User&gt; dbJdbcReader() &#123;</span><br><span class="line">        JdbcPagingItemReader&lt;User&gt; reader &#x3D; new JdbcPagingItemReader&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;指定数据源</span><br><span class="line">        reader.setDataSource(dataSource);</span><br><span class="line">        &#x2F;&#x2F;指定一次读取几条记录</span><br><span class="line">        reader.setFetchSize(2);</span><br><span class="line">        &#x2F;&#x2F;把读取到的记录转换成User对象</span><br><span class="line">        reader.setRowMapper(new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">                User user &#x3D; new User();</span><br><span class="line">                user.setId(resultSet.getInt(1));</span><br><span class="line">                user.setName(resultSet.getString(2));</span><br><span class="line">                user.setTitle(resultSet.getString(3));</span><br><span class="line">                return user;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;指定sql语句，获得结果集</span><br><span class="line">        MySqlPagingQueryProvider provider &#x3D; new MySqlPagingQueryProvider();</span><br><span class="line">        &#x2F;&#x2F;指定查询的字段</span><br><span class="line">        provider.setSelectClause(&quot;id,name,title&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定从哪个表中查询</span><br><span class="line">        provider.setFromClause(&quot;from user&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定根据哪个字段进行排序</span><br><span class="line">        Map&lt;String, Order&gt; sort &#x3D; new HashMap&lt;&gt;(1);   &#x2F;&#x2F;指定初始大小为1</span><br><span class="line">        sort.put(&quot;id&quot;,Order.ASCENDING);</span><br><span class="line">        &#x2F;&#x2F;将排序方式写入provider</span><br><span class="line">        provider.setSortKeys(sort);</span><br><span class="line">        reader.setQueryProvider(provider);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class FileItemWriterConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public FlatFileItemWriter&lt;User&gt; fileItemWriter() throws Exception &#123;</span><br><span class="line">        &#x2F;&#x2F;把User对象转成字符串输出到文件</span><br><span class="line">        FlatFileItemWriter&lt;User&gt; writer &#x3D; new FlatFileItemWriter&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;写入文件路径</span><br><span class="line">        String path&#x3D;&quot;d:\\mydb.txt&quot;;</span><br><span class="line">        writer.setResource(new FileSystemResource(path));</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;把User对象转成字符串</span><br><span class="line">        writer.setLineAggregator(new LineAggregator&lt;User&gt;() &#123;</span><br><span class="line">            ObjectMapper mapper &#x3D; new ObjectMapper();</span><br><span class="line">            @Override</span><br><span class="line">            public String aggregate(User user) &#123;</span><br><span class="line">                String str &#x3D; null;</span><br><span class="line">                try &#123;</span><br><span class="line">                    str&#x3D;mapper.writeValueAsString(user);</span><br><span class="line">                &#125;catch (JsonProcessingException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                return str;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        writer.afterPropertiesSet();</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="将数据库数据写入XML中"><a href="#将数据库数据写入XML中" class="headerlink" title="将数据库数据写入XML中"></a>将数据库数据写入XML中</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class XmlItemWriterDemo &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;dbJdbcReader&quot;)</span><br><span class="line">    private ItemReader&lt;User&gt; dbJdbcReader;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;xmlItemWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; xmlItemWriter;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job XmlItemWriterJob()&#123;</span><br><span class="line">        return  jobBuilderFactory.get(&quot;XmlItemWriterJob&quot;)</span><br><span class="line">                .start(XmlItemWriterStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Step XmlItemWriterStep()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;XmlItemWriterStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(2)</span><br><span class="line">                .reader(dbJdbcReader)</span><br><span class="line">                .writer(xmlItemWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>读取：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class DbJdbcReaderConfig &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public JdbcPagingItemReader&lt;User&gt; dbJdbcReader() &#123;</span><br><span class="line">        JdbcPagingItemReader&lt;User&gt; reader &#x3D; new JdbcPagingItemReader&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;指定数据源</span><br><span class="line">        reader.setDataSource(dataSource);</span><br><span class="line">        &#x2F;&#x2F;指定一次读取几条记录</span><br><span class="line">        reader.setFetchSize(2);</span><br><span class="line">        &#x2F;&#x2F;把读取到的记录转换成User对象</span><br><span class="line">        reader.setRowMapper(new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">                User user &#x3D; new User();</span><br><span class="line">                user.setId(resultSet.getInt(1));</span><br><span class="line">                user.setName(resultSet.getString(2));</span><br><span class="line">                user.setTitle(resultSet.getString(3));</span><br><span class="line">                return user;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;指定sql语句，获得结果集</span><br><span class="line">        MySqlPagingQueryProvider provider &#x3D; new MySqlPagingQueryProvider();</span><br><span class="line">        &#x2F;&#x2F;指定查询的字段</span><br><span class="line">        provider.setSelectClause(&quot;id,name,title&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定从哪个表中查询</span><br><span class="line">        provider.setFromClause(&quot;from user&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定根据哪个字段进行排序</span><br><span class="line">        Map&lt;String, Order&gt; sort &#x3D; new HashMap&lt;&gt;(1);   &#x2F;&#x2F;指定初始大小为1</span><br><span class="line">        sort.put(&quot;id&quot;,Order.ASCENDING);</span><br><span class="line">        &#x2F;&#x2F;将排序方式写入provider</span><br><span class="line">        provider.setSortKeys(sort);</span><br><span class="line">        reader.setQueryProvider(provider);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class XmlWriterDemo &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public StaxEventItemWriter&lt;User&gt; xmlItemWriter() throws Exception &#123;</span><br><span class="line">        StaxEventItemWriter&lt;User&gt; writer &#x3D; new StaxEventItemWriter&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;将对象转换成xml</span><br><span class="line">        XStreamMarshaller marshaller &#x3D; new XStreamMarshaller();</span><br><span class="line">        Map&lt;String,Class&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;user&quot;,User.class);</span><br><span class="line">        marshaller.setAliases(map);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;指定xml的跟标签</span><br><span class="line">        writer.setRootTagName(&quot;users&quot;);</span><br><span class="line">        writer.setMarshaller(marshaller);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;指明写入位置</span><br><span class="line">        String path &#x3D; &quot;d:\\mydb.xml&quot;;</span><br><span class="line">        writer.setResource(new FileSystemResource(path));</span><br><span class="line"></span><br><span class="line">        writer.afterPropertiesSet();</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将数据库数据写入多个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class MultFileItemWriter &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;dbJdbcReader&quot;)</span><br><span class="line">    private ItemReader&lt;User&gt; dbJdbcReader;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;multiFileItemWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; multiFileItemWriter;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;实现分类需要注入相应方法</span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;jsonFileWriter&quot;)</span><br><span class="line">    private ItemStreamWriter&lt;User&gt; jsonFileWriter;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;xmlItemWriter&quot;)</span><br><span class="line">    private ItemStreamWriter&lt;User&gt; xmlItemWriter;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job multiFileItemWriterDemoJob2()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;multiFileItemWriterDemoJob2&quot;)</span><br><span class="line">                .start(multiFileItemWriterDemoStep2())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step multiFileItemWriterDemoStep2()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;multiFileItemWriterDemoStep2&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(2)</span><br><span class="line">                .reader(dbJdbcReader)</span><br><span class="line">                .writer(multiFileItemWriter)</span><br><span class="line">                .stream(jsonFileWriter)</span><br><span class="line">                .stream(xmlItemWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>读取:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class MultiFileItemReaderDemo &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public JdbcPagingItemReader&lt;User&gt; dbJdbcReader() &#123;</span><br><span class="line">        JdbcPagingItemReader&lt;User&gt; reader &#x3D; new JdbcPagingItemReader&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;指定数据源</span><br><span class="line">        reader.setDataSource(dataSource);</span><br><span class="line">        &#x2F;&#x2F;指定一次读取几条记录</span><br><span class="line">        reader.setFetchSize(2);</span><br><span class="line">        &#x2F;&#x2F;把读取到的记录转换成User对象</span><br><span class="line">        reader.setRowMapper(new RowMapper&lt;User&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public User mapRow(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">                User user &#x3D; new User();</span><br><span class="line">                user.setId(resultSet.getInt(1));</span><br><span class="line">                user.setName(resultSet.getString(2));</span><br><span class="line">                user.setTitle(resultSet.getString(3));</span><br><span class="line">                return user;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;指定sql语句，获得结果集</span><br><span class="line">        MySqlPagingQueryProvider provider &#x3D; new MySqlPagingQueryProvider();</span><br><span class="line">        &#x2F;&#x2F;指定查询的字段</span><br><span class="line">        provider.setSelectClause(&quot;id,name,title&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定从哪个表中查询</span><br><span class="line">        provider.setFromClause(&quot;from user&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定根据哪个字段进行排序</span><br><span class="line">        Map&lt;String, Order&gt; sort &#x3D; new HashMap&lt;&gt;(1);   &#x2F;&#x2F;指定初始大小为1</span><br><span class="line">        sort.put(&quot;id&quot;,Order.ASCENDING);</span><br><span class="line">        &#x2F;&#x2F;将排序方式写入provider</span><br><span class="line">        provider.setSortKeys(sort);</span><br><span class="line">        reader.setQueryProvider(provider);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class MultiFileItemWriterConfig &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public FlatFileItemWriter&lt;User&gt; jsonFileWriter() throws Exception &#123;</span><br><span class="line">        &#x2F;&#x2F;把User对象转成字符串输出到文件</span><br><span class="line">        FlatFileItemWriter&lt;User&gt; writer &#x3D; new FlatFileItemWriter&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;写入文件路径</span><br><span class="line">        String path&#x3D;&quot;d:\\mydb.txt&quot;;</span><br><span class="line">        writer.setResource(new FileSystemResource(path));</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;把User对象转成字符串</span><br><span class="line">        writer.setLineAggregator(new LineAggregator&lt;User&gt;() &#123;</span><br><span class="line">            ObjectMapper mapper &#x3D; new ObjectMapper();</span><br><span class="line">            @Override</span><br><span class="line">            public String aggregate(User user) &#123;</span><br><span class="line">                String str &#x3D; null;</span><br><span class="line">                try &#123;</span><br><span class="line">                    str&#x3D;mapper.writeValueAsString(user);</span><br><span class="line">                &#125;catch (JsonProcessingException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                return str;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        writer.afterPropertiesSet();</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public StaxEventItemWriter&lt;User&gt; xmlItemWriter() throws Exception &#123;</span><br><span class="line">        StaxEventItemWriter&lt;User&gt; writer &#x3D; new StaxEventItemWriter&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;将对象转换成xml</span><br><span class="line">        XStreamMarshaller marshaller &#x3D; new XStreamMarshaller();</span><br><span class="line">        Map&lt;String,Class&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;user&quot;,User.class);</span><br><span class="line">        marshaller.setAliases(map);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;指定xml的跟标签</span><br><span class="line">        writer.setRootTagName(&quot;users&quot;);</span><br><span class="line">        writer.setMarshaller(marshaller);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;指明写入位置</span><br><span class="line">        String path &#x3D; &quot;d:\\mydb.xml&quot;;</span><br><span class="line">        writer.setResource(new FileSystemResource(path));</span><br><span class="line"></span><br><span class="line">        writer.afterPropertiesSet();</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;输出数据到多个文件(失败)</span><br><span class="line">    &#x2F;*@Bean</span><br><span class="line">    public CompositeItemWriter&lt;User&gt; multiFileItemWriter() throws Exception &#123;</span><br><span class="line">        CompositeItemWriter&lt;User&gt; writer &#x3D; new CompositeItemWriter&lt;User&gt;();</span><br><span class="line">        &#x2F;&#x2F;指定接收方式</span><br><span class="line">        writer.setDelegates(Arrays.asList(jsonFileWriter(),xmlItemWriter()));</span><br><span class="line">        writer.afterPropertiesSet();</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;*&#x2F;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;实现分类</span><br><span class="line">    @Bean</span><br><span class="line">    public ClassifierCompositeItemWriter&lt;User&gt; multiFileItemWriter()&#123;</span><br><span class="line">        ClassifierCompositeItemWriter&lt;User&gt; writer &#x3D; new ClassifierCompositeItemWriter&lt;User&gt;();</span><br><span class="line">        writer.setClassifier(new Classifier&lt;User, ItemWriter&lt;? super User&gt;&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public ItemWriter&lt;? super User&gt; classify(User user) &#123;</span><br><span class="line">                &#x2F;&#x2F;按照User的id进行分类</span><br><span class="line">                ItemWriter&lt;User&gt; ww &#x3D; null;</span><br><span class="line">                try &#123;</span><br><span class="line">                    ww &#x3D; user.getId()%2&#x3D;&#x3D;0?jsonFileWriter():xmlItemWriter();</span><br><span class="line">                &#125; catch (Exception e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                return ww;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        return writer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ItemProcessor"><a href="#ItemProcessor" class="headerlink" title="ItemProcessor"></a>ItemProcessor</h4><p>Itemprocessor&lt;I,O&gt;用于处理业务逻辑，验证，过滤等功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class ItemProcessorDemo &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;dbJdbcReader&quot;)</span><br><span class="line">    private ItemReader&lt;User&gt; dbJdbcReader;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;dbFileWriter&quot;)</span><br><span class="line">    private ItemWriter&lt;User&gt; dbFileWriter;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private ItemProcessor&lt;User,User&gt; firstNameUpperProcessor;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private ItemProcessor&lt;User,User&gt; idFilterProcessor;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job itemProcessorDemoJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;itemProcessorDemoJob&quot;)</span><br><span class="line">                .start(itemProcessorDemoStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step itemProcessorDemoStep()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;itemProcessorDemoStep&quot;)</span><br><span class="line">                .&lt;User,User&gt;chunk(2)</span><br><span class="line">                .reader(dbJdbcReader)</span><br><span class="line">                .processor(processor())</span><br><span class="line">                .writer(dbFileWriter)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;有多种处理方式</span><br><span class="line">    @Bean</span><br><span class="line">    public CompositeItemProcessor&lt;User,User&gt; processor()&#123;</span><br><span class="line">        CompositeItemProcessor&lt;User,User&gt; processor &#x3D; new CompositeItemProcessor&lt;User,User&gt;();</span><br><span class="line">        &#x2F;&#x2F;创建集合,接受多种处理方式</span><br><span class="line">        List&lt;ItemProcessor&lt;User,User&gt;&gt; delagates &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">        delagates.add(firstNameUpperProcessor);</span><br><span class="line">        delagates.add(idFilterProcessor);</span><br><span class="line">        processor.setDelegates(delagates);</span><br><span class="line">        return processor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>读取数据：读取数据库的数据（代码看上面）</p>
+<p>写入数据：将数据写入普通文件（代码看上面）</p>
+<p>处理方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@Component     &#x2F;&#x2F;这个类交给Spring管理</span><br><span class="line">public class FirstNameUpperProcessor implements ItemProcessor&lt;User,User&gt; &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public User process(User user) throws Exception &#123;</span><br><span class="line">        User uu &#x3D; new User();</span><br><span class="line">        uu.setId(user.getId());</span><br><span class="line">        uu.setName(user.getName().toUpperCase());</span><br><span class="line">        uu.setTitle(user.getTitle().toUpperCase());</span><br><span class="line">        return uu;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class IdFilterProcessor implements ItemProcessor&lt;User,User&gt; &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public User process(User user) throws Exception &#123;</span><br><span class="line">        if(user.getId()%2&#x3D;&#x3D;0)&#123;</span><br><span class="line">            return user;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return null;  &#x2F;&#x2F;相当于把该对象过滤掉</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="错误处理："><a href="#错误处理：" class="headerlink" title="错误处理："></a>错误处理：</h4><p>默认情况下当任务出现异常时，SpringBatch会结束任务，当使用相同参数重启任务时，SpringBatch会去执行未执行的剩余任务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class ErrorDemoJob &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JobBuilderFactory jobBuilderFactory;</span><br><span class="line">    @Autowired</span><br><span class="line">    private StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job errorJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;errorJob&quot;)</span><br><span class="line">                .start(errorStep1())</span><br><span class="line">                .next(errorStep2())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step errorStep2()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;errorStep2&quot;)</span><br><span class="line">                .tasklet(errorHandling())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step errorStep1()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;errorStep1&quot;)</span><br><span class="line">                .tasklet(errorHandling())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope</span><br><span class="line">    public Tasklet errorHandling() &#123;</span><br><span class="line">        return new Tasklet() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception &#123;</span><br><span class="line">                Map&lt;String,Object&gt; stepExecutionContext &#x3D; chunkContext.getStepContext().getStepExecutionContext();</span><br><span class="line"></span><br><span class="line">                if(stepExecutionContext.containsKey(&quot;springbatch&quot;))&#123;</span><br><span class="line">                    System.out.println(&quot;SpringBatch........&quot;);</span><br><span class="line">                    return RepeatStatus.FINISHED;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    System.out.println(&quot;无数据中........&quot;);</span><br><span class="line">                    chunkContext.getStepContext().getStepExecution().getExecutionContext().put(&quot;springbatch&quot;,true);</span><br><span class="line">                    throw  new RuntimeException(&quot;error.....&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="错误重试"><a href="#错误重试" class="headerlink" title="错误重试:"></a>错误重试:</h5><p>​    当发生异常时，不会进行停止，继续重试进行测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class SkipDemo &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    public JobBuilderFactory jobBuilderFactory;</span><br><span class="line">    @Autowired</span><br><span class="line">    public StepBuilderFactory stepBuilderFactory;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private ItemWriter&lt;String&gt; skipItemWriter;</span><br><span class="line">    @Autowired</span><br><span class="line">    private ItemProcessor&lt;String,String&gt; skipItemProcessor;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Job skipJob()&#123;</span><br><span class="line">        return jobBuilderFactory.get(&quot;skipJob&quot;)</span><br><span class="line">                .start(skipStep())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public Step skipStep()&#123;</span><br><span class="line">        return stepBuilderFactory.get(&quot;skipStep&quot;)</span><br><span class="line">                .&lt;String,String&gt;chunk(10)</span><br><span class="line">                .reader(reader())</span><br><span class="line">                .processor(skipItemProcessor)</span><br><span class="line">                .writer(skipItemWriter)</span><br><span class="line">                .faultTolerant()&#x2F;&#x2F;容错</span><br><span class="line">                .retry(CustomRetryException.class)</span><br><span class="line">                .retryLimit(5)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    @StepScope</span><br><span class="line">    public ListItemReader&lt;String&gt; reader()&#123;</span><br><span class="line">        List&lt;String&gt; items &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">        for(int i&#x3D;0;i&lt;60;i++)&#123;</span><br><span class="line">            items.add(String.valueOf(i));</span><br><span class="line">        &#125;</span><br><span class="line">        ListItemReader&lt;String&gt; reader &#x3D; new ListItemReader&lt;&gt;(items);</span><br><span class="line">        return reader;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class SkipItemWriter implements ItemWriter&lt;String&gt; &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write(List&lt;? extends String&gt; list) throws Exception &#123;</span><br><span class="line">        for (String ll:list)&#123;</span><br><span class="line">            System.out.println(ll);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class SkipItemProcessor implements ItemProcessor&lt;String,String&gt; &#123;</span><br><span class="line"></span><br><span class="line">    private int attemptCount &#x3D; 0;</span><br><span class="line">    @Override</span><br><span class="line">    public String process(String s) throws Exception &#123;</span><br><span class="line">        System.out.println(&quot;processor item &quot;+s);</span><br><span class="line">        if(s.equals(&quot;26&quot;))&#123;</span><br><span class="line">            attemptCount++;</span><br><span class="line"></span><br><span class="line">            if(attemptCount&gt;&#x3D;3)&#123;</span><br><span class="line">                System.out.println(&quot;Retried&quot;+attemptCount+&quot;times success.&quot;);</span><br><span class="line">                return String.valueOf(Integer.valueOf(s)*-1);</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                System.out.println(&quot;Processed the &quot;+attemptCount+&quot;times fail.&quot;);</span><br><span class="line">                throw new CustomRetryException(&quot;Process failed. Attempt:&quot;+attemptCount);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            return String.valueOf(Integer.valueOf(s)*-1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class CustomRetryException extends Exception&#123;</span><br><span class="line">    public CustomRetryException()&#123;</span><br><span class="line">        super();</span><br><span class="line">    &#125;</span><br><span class="line">    public CustomRetryException(String msg)&#123;</span><br><span class="line">        super(msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="异常错误跳过"><a href="#异常错误跳过" class="headerlink" title="异常错误跳过"></a>异常错误跳过</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Step <span class="title">skipStep</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> stepBuilderFactory.get(<span class="string">"skipStep"</span>)</span><br><span class="line">                .&lt;String,String&gt;chunk(<span class="number">10</span>)</span><br><span class="line">                .reader(reader())</span><br><span class="line">                .processor(skipItemProcessor)</span><br><span class="line">                .writer(skipItemWriter)</span><br><span class="line">                .faultTolerant()<span class="comment">//容错</span></span><br><span class="line">                .skip(CustomRetryException<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">                .<span class="title">skipLimit</span>(5)</span></span><br><span class="line"><span class="class">                .<span class="title">build</span>()</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>监听器：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySkipListener</span> <span class="keyword">implements</span> <span class="title">SkipListener</span>&lt;<span class="title">String</span>,<span class="title">String</span>&gt; </span>&#123;</span><br><span class="line">    <span class="comment">//读取时</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSkipInRead</span><span class="params">(Throwable throwable)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//输出时</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSkipInWrite</span><span class="params">(String s, Throwable throwable)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//处理数据时</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSkipInProcess</span><span class="params">(String s, Throwable throwable)</span> </span>&#123;</span><br><span class="line">        System.out.println(s+<span class="string">"发生异常"</span>+throwable);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="面试题："><a href="#面试题：" class="headerlink" title="面试题："></a>面试题：</h4><p>​        1.SpringBatch上下文：</p>
+<p>​                 ExecutionContext，</p>
+<p>​                在Step中一般用于存储步骤的状态，在下次重新启动的是重置到正确的位置</p>
+<p>​                在Job中用于跨步骤来共享相应的数据</p>
+<p>​         2.Step，Chunk和Tasklet有什么区别 </p>
+<p>​                Step是一个批处理的单个执行步骤，一个批处理有多个执行步骤</p>
+<p>​                tasklet可以定义一些执行逻辑，让执行逻辑能够自定义的实现</p>
+<p>​                chunk是一个任务单元，有标准读取，处理，写入操作</p>
+<p>​            3.远程分区和远程分块</p>
+<p>​                 分区是主/从步骤配置，允许并行处理数据分区。每个分区都通过一些元数据来描述 </p>
+<p>​                 远程分块与远程分区类似，因为它是主/从配置。但是，使用远程组块时，数据由主站读取并通过线路发送给从站进行处理 , 处理完成后，结果将返回给主设备进行写入 </p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zhou-88650.github.io" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zhou-88650.github.io/2020/09/01/SpringBatch/">http://zhou-88650.github.io/2020/09/01/SpringBatch/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="http://zhou-88650.github.io" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/09/01/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="面试题">
+                        
+                        <span class="card-title">面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Redis​        非关系性数据库,是一个支持持久化的内存数据库，通过持久化机制将内存的数据同步保存到硬盘文件中，当Redis重启后再将硬盘文件加载到内存中，达到一个回复数据的目的
+缓存穿透
+​        指的是缓存和数据库中都
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/03/hh/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="http://zhou-88650.github.io" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="ActiveMQ, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>ActiveMQ | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">ActiveMQ</h1>
                 </div>
             </div>
         </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-03
+                    2020-09-01
                 </div>
                 
 
@@ -466,8 +466,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+                <h1 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h1><h2 id="一、什么是消息中间件"><a href="#一、什么是消息中间件" class="headerlink" title="一、什么是消息中间件"></a><strong>一、什么是消息中间件</strong></h2><p>消息中间件顾名思义实现的就是在两个系统或两个客户端之间进行消息传送</p>
+<p><img src="https://img2018.cnblogs.com/blog/1468250/201907/1468250-20190720125917002-1679869251.png" alt="img"></p>
+<p><strong>MQ产品种类</strong></p>
+<p>​        Kafka</p>
+<p>​        RabbitMQ</p>
+<p>​        RocketMQ：API 接受发送、MQ 的高可用、 MQ 的集群容错配置 、MQ 的持久化 、延时发送、签收机制、Spring/SpringBoot 整合 （满足的技术）</p>
+<p>​        ActiveMQ</p>
+<p><strong>为什么需要MQ</strong></p>
+<p>​             解决了耦合调用、异步模型、抵御洪峰流量，保护了主业务，消峰。 </p>
+<h2 id="二、什么是ActiveMQ"><a href="#二、什么是ActiveMQ" class="headerlink" title="二、什么是ActiveMQ"></a><strong>二、什么是ActiveMQ</strong></h2><p>ActiveMQ是一种开源的基于JMS（Java Message Servie）规范的一种消息中间件的实现，ActiveMQ的设计目标是提供标准的，面向消息的，能够跨越多语言和多系统的应用集成消息通信中间件。</p>
+<p><strong>过程</strong>: 发送者把消息发送给消息服务器，消息服务器将消息存放在若干队列/主题topic中，在合适的时候，消息服务器回将消息转发给接受者。在这个过程中，发送和接收是异步的，也就是发送无需等待，而且发送者和接受者的生命周期也没有必然的关系；<br>尤其在发布pub/订阅sub模式下，也可以完成一对多的通信，即让一个消息有多个接受者。 </p>
+<p><strong>特点</strong>：采用异步处理模式，发布者将消息发送出去给处理中，就不用管消息的处理过程，也不需要去等待处理结果；只需要将消息发送给MQ,处理者就可以从MQ中读取消息，至于处理过程，处理时间则于发布者无关，这就是异步传输方式,最终的效果就是解耦</p>
+<h2 id="三、什么时候需要用ActiveMQ"><a href="#三、什么时候需要用ActiveMQ" class="headerlink" title="三、什么时候需要用ActiveMQ"></a><strong>三、什么时候需要用ActiveMQ</strong></h2><p>ActiveMQ常被应用与系统业务的解耦，异步消息的推送，增加系统并发量，提高用户体验。例如以我在工作中的使用，在比较耗时且异步的远程开锁操作时</p>
+<p><img src="https://img2018.cnblogs.com/blog/1468250/201907/1468250-20190720131946328-164805159.png" alt="img"></p>
+<h2 id="四、如何使用ActiveMQ"><a href="#四、如何使用ActiveMQ" class="headerlink" title="四、如何使用ActiveMQ"></a><strong>四、如何使用ActiveMQ</strong></h2><p>1.AcitveMQ的数据传送流程</p>
+<p><img src="https://img2018.cnblogs.com/blog/1468250/201907/1468250-20190720132250768-792851447.png" alt="img"></p>
+<p>2.ActiveMQ的两种消息传递类型</p>
+<p>（1）点对点传输，即一个生产者对应一个消费者，生产者向broke推送数据，数据存储在broke的一个队列中，当消费者接受该条队列里的数据。</p>
+<p>（2）基于发布/订阅模式的传输，即根据订阅话题来接收相应数据，一个生产者可向多个消费者推送数据，与MQTT协议的实现是类似的，对MQTT协议有兴趣的可跳转到<a href="https://www.cnblogs.com/xiguadadage/p/11216463.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiguadadage/p/11216463.html</a></p>
+<p>两种消息传递类型的不同，点对点传输消费者可以接收到在连接之前生产者所推送的数据，而基于发布/订阅模式的传输方式消费者只能接收到连接之后生产者推送的数据。</p>
+<p>3.ActiveMQ的安装与启动</p>
+<p>（1）官网下载对应服务器版本( <a href="http://activemq.apache.org/components/classic/download/" target="_blank" rel="noopener">http://activemq.apache.org/components/classic/download/</a> )</p>
+<p>​            上传到/opt目录</p>
+<p><img src="C:%5CUsers%5CHasee%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200901172146322.png" alt="image-20200901172146322"></p>
+<p>（2）解压后进入apache-activemq-5.15.9/bin目录</p>
+<p>​            解压命令: tar -zxvf 文件jar包</p>
+<p>​            将解压后文件移动到根目录</p>
+<p><img src="C:%5CUsers%5CHasee%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200901172749767.png" alt="image-20200901172749767"></p>
+<p>（3）执行./activemq start启动ActiveMQ</p>
+<p><img src="https://img2018.cnblogs.com/blog/1468250/201907/1468250-20190720133622101-407557464.png" alt="img"></p>
+<p>(4)浏览器输入ActiveMQ启动的服务器ip:8161便可进入web界面，点击Manage ActiveMQ broker可以查看消息推送的状态，默认账号密码为admin,admin</p>
+<p><img src="https://img2018.cnblogs.com/blog/1468250/201907/1468250-20190720135038845-65269295.png" alt="img"></p>
+<p>（5）启动错误分析</p>
+<p>进入/root/apache-activemq-5.15.9/data目录查看activemq.log文件，根据错误提示信息修改，例如端口号被占用等。</p>
+
             </div>
             <hr/>
 
@@ -492,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhou-88650.github.io/2020/06/03/hh/">http://zhou-88650.github.io/2020/06/03/hh/</a>
+                    <a href="http://zhou-88650.github.io/2020/09/01/ActiveMQ/">http://zhou-88650.github.io/2020/09/01/ActiveMQ/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -695,65 +728,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/09/01/SpringBatch/">
+                <a href="/2020/09/01/ActiveMQ/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="SpringBatch">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="ActiveMQ">
                         
-                        <span class="card-title">SpringBatch</span>
+                        <span class="card-title">ActiveMQ</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            批处理：理解: Spring Batch简单来说就是一个轻量级的批处理框架，从名字就可以知道它是Spring 的子项目。我们在工作开发中可能会面临到一些需要处理较大数据量的场景，例如将一个表的全部数据导入到另一张表结构类似的表中，或者批量读
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-01
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/03/hh/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            ActiveMQ一、什么是消息中间件消息中间件顾名思义实现的就是在两个系统或两个客户端之间进行消息传送
+
+MQ产品种类
+​        Kafka
+​        RabbitMQ
+​        RocketMQ：API 接受发送、
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-01
                             </span>
                         <span class="publish-author">
                             
@@ -764,6 +766,43 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/01/Mysql/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Mysql">
+                        
+                        <span class="card-title">Mysql</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Mysql123456789101112131415161718192021222324252627282930CREATE DATABASE dbdbCREATE TABLE &#96;tbl_emp&#96; (&#96;id&#96;
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>

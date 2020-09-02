@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="Mysql, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>Mysql | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Mysql</h1>
                 </div>
             </div>
         </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-03
+                    2020-09-01
                 </div>
                 
 
@@ -466,8 +466,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+                <h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE dbdb</span><br><span class="line">CREATE TABLE &#96;tbl_emp&#96; (</span><br><span class="line">&#96;id&#96; INT(11) NOT NULL AUTO_INCREMENT,</span><br><span class="line">&#96;name&#96; VARCHAR(20) DEFAULT NULL,</span><br><span class="line">&#96;deptId&#96; INT(11) DEFAULT NULL,</span><br><span class="line">PRIMARY KEY (&#96;id&#96;) ,</span><br><span class="line">KEY &#96;fk_dept_id&#96;(&#96;deptId&#96;)</span><br><span class="line">)ENGINE &#x3D; INNODB AUTO_INCREMENT &#x3D; 1 CHARACTER SET &#x3D; utf8;</span><br><span class="line"></span><br><span class="line">CREATE TABLE &#96;tbl_dept&#96; (</span><br><span class="line">&#96;id&#96; INT(11) NOT NULL AUTO_INCREMENT,</span><br><span class="line">&#96;deptName&#96; VARCHAR(30) DEFAULT NULL,</span><br><span class="line">&#96;locAdd&#96; VARCHAR(40) DEFAULT NULL,</span><br><span class="line">PRIMARY KEY (&#96;id&#96;)</span><br><span class="line">) ENGINE &#x3D; INNODB AUTO_INCREMENT &#x3D; 1 CHARACTER SET &#x3D; utf8;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">INSERT INTO tbl_dept(deptName,locAdd)VALUES(&#39;RD&#39;,11)</span><br><span class="line">INSERT INTO tbl_dept(deptName,locAdd)VALUES(&#39;HR&#39;,12)</span><br><span class="line">INSERT INTO tbl_dept(deptName,locAdd)VALUES(&#39;MK&#39;,13);</span><br><span class="line">INSERT INTO tbl_dept(deptName,locAdd)VALUES(&#39;MIS&#39;,14)</span><br><span class="line">INSERT INTO tbl_dept(deptName,locAdd)VALUES(&#39;FD&#39;,15)</span><br><span class="line">INSERT INTO tbl_dept(deptName,locAdd)VALUES(&#39;FD&#39;,16)</span><br><span class="line"></span><br><span class="line">INSERT INTO tbl_emp(NAME,deptId)VALUES(&#39;z3&#39;,1);</span><br><span class="line">INSERT INTO tbl_emp(NAME,deptId)VALUES(&#39;z4&#39;,2);</span><br><span class="line">INSERT INTO tbl_emp(NAME,deptId)VALUES(&#39;z5&#39;,3);</span><br><span class="line">INSERT INTO tbl_emp(NAME,deptId)VALUES(&#39;z5&#39;,4);</span><br><span class="line">INSERT INTO tbl_emp(NAME,deptId)VALUES(&#39;z7&#39;,5);</span><br><span class="line">INSERT INTO tbl_emp(NAME,deptId)VALUES(&#39;z7&#39;,31);</span><br></pre></td></tr></table></figure>
+
+<p><strong>内连接</strong>(查询两表之间共有部分)</p>
+<p>​                    SELECT * FROM tbl_emp e INNER JOIN tbl_dept d ON e.deptId = d.id</p>
+<p><strong>左连接</strong>（查询tbl_emp表的所有数据和两表共有数据）</p>
+<p>​                    SELECT * FROM tbl_emp e LEFT JOIN tbl_dept d ON e.deptId = d.id</p>
+<p><strong>右连接</strong>（查询tbl_dept表的所有数据和两表共有数据）</p>
+<p>​                    SELECT * FROM tbl_emp e RIGHT JOIN tbl_dept d ON e.deptId = d.id</p>
+<p><strong>左外连接</strong>（查询tbl_dept表中不包含tbl_dept表的数据）</p>
+<p>​                    SELECT * FROM tbl_emp e LEFT JOIN tbl_dept d ON e.deptId = d.id WHERE d.id IS NULL</p>
+<p><strong>右外连接</strong>（查询tbl_dept表中不包含tbl_dept表的数据）</p>
+<p>​                    SELECT * FROM tbl_emp e RIGHT JOIN tbl_dept d ON e.deptId = d.id WHERE e.deptId IS NULL</p>
+<p><strong>联合查询</strong>(查询所有)</p>
+<p>SELECT * FROM tbl_emp e LEFT JOIN tbl_dept d ON e.deptId = d.id</p>
+<p>UNION<br>SELECT * FROM tbl_emp e RIGHT JOIN tbl_dept d ON e.deptId = d.id</p>
+<p><strong>联合查询</strong>（查询两表之间的独有数据）</p>
+<p>SELECT * FROM tbl_emp e LEFT JOIN tbl_dept d ON e.deptId = d.id WHERE d.id IS NULL<br>UNION<br>SELECT * FROM tbl_emp e RIGHT JOIN tbl_dept d ON e.deptId = d.id WHERE e.deptId IS NULL</p>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a><strong>索引</strong></h2><p>​            排好序可以快速查询的数据结构    </p>
+<p>​            在数据之外，数据库系统还维护这满足特定查找算法的数据结构,这些数据结构以某种方式引用数据，这样就可以在这些数据结构上实现高级查找算法，这种数据结构就是<strong>索引</strong></p>
+<p>​            一般来说索引本身很大，不可能全部存储在内存中，因此索引往往以索引文件的形式存储在磁盘上</p>
+<p><strong>优势</strong></p>
+<p>​            提高数据检索的速度，降低了数据库的io成本；</p>
+<p>​            降低数据排序的成本，降低了CPU的消耗</p>
+<p><strong>劣势</strong></p>
+<p>​            对于更新速度明显减慢</p>
+<p><strong>哪些情况下创建索引</strong></p>
+<p>​            <img src="C:%5CUsers%5CHasee%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200825154809023.png" alt="image-20200825154809023"></p>
+<p><strong>哪些情况下不创建索引</strong></p>
+<p><img src="C:%5CUsers%5CHasee%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200825154829378.png" alt="image-20200825154829378"></p>
+<p> <strong>【优化总结口诀】</strong><br>全值匹配我最爱，最左前缀要遵守；<br>带头大哥不能死，中间兄弟不能断；<br>索引列上少计算，范围之后全失效；<br>Like百分写最右，覆盖索引不写星；<br>不等空值还有or，索引失效要少用；<br>VAR引号不可丢，SQL高级也不难！ </p>
+<p>【数据库】快速理解脏读、不可重复读、幻读： <a href="https://blog.csdn.net/qq_33591903/article/details/81672260" target="_blank" rel="noopener">https://blog.csdn.net/qq_33591903/article/details/81672260</a> </p>
+
             </div>
             <hr/>
 
@@ -492,7 +522,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhou-88650.github.io/2020/06/03/hh/">http://zhou-88650.github.io/2020/06/03/hh/</a>
+                    <a href="http://zhou-88650.github.io/2020/09/01/Mysql/">http://zhou-88650.github.io/2020/09/01/Mysql/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,19 +729,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/09/01/SpringBatch/">
+                <a href="/2020/09/01/ActiveMQ/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="SpringBatch">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="ActiveMQ">
                         
-                        <span class="card-title">SpringBatch</span>
+                        <span class="card-title">ActiveMQ</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            批处理：理解: Spring Batch简单来说就是一个轻量级的批处理框架，从名字就可以知道它是Spring 的子项目。我们在工作开发中可能会面临到一些需要处理较大数据量的场景，例如将一个表的全部数据导入到另一张表结构类似的表中，或者批量读
+                            ActiveMQ一、什么是消息中间件消息中间件顾名思义实现的就是在两个系统或两个客户端之间进行消息传送
+
+MQ产品种类
+​        Kafka
+​        RabbitMQ
+​        RocketMQ：API 接受发送、
                         
                     </div>
                     <div class="publish-info">
@@ -733,27 +768,28 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/03/hh/">
+                <a href="/2020/09/01/Redis/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Redis">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Redis</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            **NoSql**:不依赖业务逻辑方式进行存储,只是通过简单的key-value模式存储，因此大大的增加了数据库的扩展能力​        特点：不遵循SQL标准（select等）、不支持ACID（原子性、一致性等）、远超SQL的性能
+Re
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-01
                             </span>
                         <span class="publish-author">
                             
@@ -763,7 +799,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="面试题, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>面试题 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">面试题</h1>
                 </div>
             </div>
         </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-03
+                    2020-09-01
                 </div>
                 
 
@@ -466,8 +466,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+                <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p>​        非关系性数据库,是一个支持持久化的内存数据库，通过持久化机制将内存的数据同步保存到硬盘文件中，当Redis重启后再将硬盘文件加载到内存中，达到一个回复数据的目的</p>
+<p><strong>缓存穿透</strong></p>
+<p>​        指的是缓存和数据库中都没有数据，但是用户还是不断的发送请求，比如说用户发送id为”-1”或者不是很大的id数时，则用户就是攻击者，给数据库实现了一定的压力</p>
+<p>​        解决方案：</p>
+<p>​                1.接口层进行效验，可以对id做基础效验：id&lt;=0直接拦截，防止出现id=-1</p>
+<p>​                2.可以将key-value设置为key-null，将空置进入缓存，但过期时间很短</p>
+<p><strong>缓存击穿</strong></p>
+<p>​        指的是缓存中没有数据（缓存时间到期）但是数据库有,由于并发用户突然特别多，在缓存中没有读取到数据则去数据库中读取，引起数据库压力突然增大</p>
+<p>​        解决方案：加互斥锁，原理：如果缓存中存在数据则直接返回，没有则进入线程，获取到锁并从数据库中读取，没有释放锁之前其他并发的线程则在队列中等待，再去缓存中获取数据</p>
+<p><strong>缓存雪崩</strong></p>
+<p>​        指的是缓存中大量数据过期，而且数据量十分大，从而引起数据库压力大甚至 down机 ，与缓存击穿不同，它是并发查询同一条数据，缓存雪崩就是不同数据都出现过期，从而查询数据库</p>
+<p>​        解决方案：将缓存过期时间设置为随机，防止同一时间大量数据过期</p>
+<p>网址： <a href="https://blog.csdn.net/kongtiao5/article/details/82771694" target="_blank" rel="noopener">https://blog.csdn.net/kongtiao5/article/details/82771694</a> </p>
+<h1 id="双亲委派模型"><a href="#双亲委派模型" class="headerlink" title="双亲委派模型"></a><strong>双亲委派模型</strong></h1><p>​            工作流程： 如果一个类加载器收到类加载的请求，它首先不会自己去尝试加载这个类，而是把这个请求委派给父类加载器完成。每个类加载器都是如此，只有当父加载器在自己的搜索范围内找不到指定的类时（即ClassNotFoundException），子加载器才会尝试自己去加载。 </p>
+<p>​            为什么需要双亲委派模型？</p>
+<p>在这里，先想一下，如果没有双亲委派，那么用户是不是可以自己定义一个java.lang.Object的同名类，java.lang.String的同名类，并把它放到ClassPath中,那么类之间的比较结果及类的唯一性将无法保证，因此，为什么需要双亲委派模型？防止内存中出现多份同样的字节码</p>
+<p>​            怎么打破双亲委派模型？</p>
+<p> 打破双亲委派机制则不仅<strong>要继承ClassLoader</strong>类，还要<strong>重写loadClass和findClass</strong>方法。 </p>
+<h1 id="jvm四种引用的区别"><a href="#jvm四种引用的区别" class="headerlink" title="jvm四种引用的区别"></a>jvm四种引用的区别</h1><p>​        强引用：就是平常new一个对象，这种引用即使出现内存不足的情况，jvm宁愿报错也不愿意进行回收</p>
+<p>​        软引用：如果一个对象只有软引用，则内存主够，就不会进行回收，则内存不够，就会进行回收</p>
+<p>​                        <strong>应用场景</strong>：浏览网页的后退按钮，是重新加载还是保存在内存中？</p>
+<p>​                        如果浏览完就进行内容的回收，每次后退则需要重新加载构建</p>
+<p>​                        如果将浏览的内容保存在内存中，则会造成内存的大量浪费</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Browser prev = <span class="keyword">new</span> Browser();               <span class="comment">// 获取页面进行浏览</span></span><br><span class="line">         SoftReference sr = <span class="keyword">new</span> SoftReference(prev); <span class="comment">// 浏览完毕后置为软引用        </span></span><br><span class="line">         <span class="keyword">if</span>(sr.get()!=<span class="keyword">null</span>)&#123; </span><br><span class="line">             rev = (Browser) sr.get();           <span class="comment">// 还没有被回收器回收，直接获取</span></span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             prev = <span class="keyword">new</span> Browser();             <span class="comment">// 由于内存吃紧，所以对软引用的对象回收了</span></span><br><span class="line">             sr = <span class="keyword">new</span> SoftReference(prev);       <span class="comment">// 重新构建</span></span><br><span class="line">         &#125;</span><br></pre></td></tr></table></figure>
+
+<p>​            弱引用：拥有弱引用则有更短暂的对象生命周期，当垃圾回收器在它所管辖的区域扫描到当前对象只有弱引用的时候，则无论内存是否足够，都会进行回收</p>
+<p>​            虚引用：一个对象仅只有虚引用，则和没有引用一样，在任何时候都会进行回收，主要用来跟踪垃圾回收器回收的活动</p>
+<p><strong>jvm内存区域</strong></p>
+<p>​            1.程序计数器：线程私有， 每个线程都有自己的程序计数器这样当线程执行切换的时候就可以在上次执行的基础上继续执行，仅仅从一条线程线性执行的角度而言，代码是一条一条的往下执行的，这个时候就是程序计数器 </p>
+<p>​             <a href="https://blog.csdn.net/weixin_43218500/article/details/106043711" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43218500/article/details/106043711</a> </p>
+<p>​             2.java虚拟栈：用于储存局部变量表（基本数据类型、对象引用）、动态链接、方法出口</p>
+<p>​            3.本地方法栈：与虚拟机栈类似，只不过虚拟机栈是服务java方法，本地方法栈是为虚拟机调用native方法而服务的</p>
+<p>​            4.java堆：java中最大的一块内存区域，被所有线程共享的，几乎所有的实例对象都在此分配内存</p>
+<p>​            5.方法区：用于储存虚拟机已经加载的类信息、常量、静态变量，即编译后的代码</p>
+<p> *<em>Maven的module特征、传递依赖、继承机制、聚合机制来构建项目 *</em></p>
+<p>​    特征：module字面意思相当于是模块，用来管理同个项目中的各个模块</p>
+<p>​    依赖：C依赖与B模块，但是同时不依赖与A模块( <strong>注意</strong>：B必须先安装到本地库，否则编译C时会抛异常 )</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;com.project&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;project.B&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line">          &lt;exclusions&gt;</span><br><span class="line">            &lt;exclusion&gt;</span><br><span class="line">                  &lt;groupId&gt;com.project&lt;/groupId&gt;</span><br><span class="line">                  &lt;artifactId&gt;project.A&lt;/artifactId&gt;</span><br><span class="line">            &lt;/exclusion&gt;</span><br><span class="line">          &lt;/exclusions&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​    parent（父工程）聚合A、B、C（子工程）三个项目 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">父工程(聚合)</span><br><span class="line">&lt;packaging&gt;pom&lt;/packaging&gt;</span><br><span class="line">    &lt;modules&gt;</span><br><span class="line">      &lt;module&gt;../project.A&lt;/module&gt;</span><br><span class="line">      &lt;module&gt;../project.B&lt;/module&gt;</span><br><span class="line">      &lt;module&gt;../project.C&lt;/module&gt;</span><br><span class="line">   &lt;/modules&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">子工程(继承)</span><br><span class="line">	&lt;parent&gt;</span><br><span class="line">        &lt;groupId&gt;com.project&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;project.parent&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line">    &lt;/parent&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 则子工程会自动继承父类的依赖jar </p>
+<h1 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h1><p>​        通过key-value的形式进行储存，底层实际上是数组和链表来组成的</p>
+<p>​         <strong>put方法:</strong>当使用put方法时，先查找出数组位置是否存在对象；存在，则把里面的链表拿出来，判断链表里面是否存在key值与传递过来的key值一样的对象，存在，则把传递过来的value取代链表key对应的value,不存在，则直接通过链表的add()方法加到链表后面</p>
+<p>​        <strong>get方法:</strong>当使用get方法时，先查找出数组位置是否存在对象；如果不存在，则返回为空，如果存在，则遍历链表，判断链表里面是否存在key值与传递过来的key值一样的对象，存在，则把key值对应的value取出返回,不存在，则返回为空</p>
+
             </div>
             <hr/>
 
@@ -492,7 +539,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhou-88650.github.io/2020/06/03/hh/">http://zhou-88650.github.io/2020/06/03/hh/</a>
+                    <a href="http://zhou-88650.github.io/2020/09/01/%E9%9D%A2%E8%AF%95%E9%A2%98/">http://zhou-88650.github.io/2020/09/01/%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,19 +746,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/09/01/SpringBatch/">
+                <a href="/2020/09/01/%E9%9D%A2%E8%AF%95%E9%A2%981/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="SpringBatch">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="面试题1">
                         
-                        <span class="card-title">SpringBatch</span>
+                        <span class="card-title">面试题1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            批处理：理解: Spring Batch简单来说就是一个轻量级的批处理框架，从名字就可以知道它是Spring 的子项目。我们在工作开发中可能会面临到一些需要处理较大数据量的场景，例如将一个表的全部数据导入到另一张表结构类似的表中，或者批量读
+                            MVC的理解MVC是Model—View—Controler的简称。即模型—视图—控制器。MVC是一种设计模式，它强制性的把应用程序的输入、处理和输出分开。MVC中的模型、视图、控制器它们分别担负着不同的任务。       （1）视图: 负
                         
                     </div>
                     <div class="publish-info">
@@ -733,27 +780,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/03/hh/">
+                <a href="/2020/09/01/SpringBatch/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="SpringBatch">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">SpringBatch</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            批处理：理解: Spring Batch简单来说就是一个轻量级的批处理框架，从名字就可以知道它是Spring 的子项目。我们在工作开发中可能会面临到一些需要处理较大数据量的场景，例如将一个表的全部数据导入到另一张表结构类似的表中，或者批量读
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-01
                             </span>
                         <span class="publish-author">
                             
@@ -763,7 +810,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
